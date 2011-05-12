@@ -135,7 +135,7 @@ data-filter-attribute can be used
 
 ### replace
 
-    <div data-tpl-filter-replace="Foo" data-tpl-filter="Bar">Foo Bar</div>
+    <div data-tpl-filter-find="Foo" data-tpl-filter-replace="Bar">Foo Bar</div>
     # => <div>Bar bar</div>
 
 "data-tpl-filter-ireplace" could be case-insensitive replace filter.
