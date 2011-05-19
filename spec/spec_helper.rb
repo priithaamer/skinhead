@@ -3,4 +3,4 @@ require 'bundler'
 
 Bundler.setup(:default, :test)
 
-require 'tpl'
+require 'skinhead'

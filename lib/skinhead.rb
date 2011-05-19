@@ -1,6 +1,6 @@
 require 'nokogiri'
 
-module Tpl
+module Skinhead
   
   class << self
     def render(tpl, assigns = {})

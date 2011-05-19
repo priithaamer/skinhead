@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'benchmark'
 
-describe Tpl do
+describe Skinhead do
   describe 'data-tpl-content' do
     it 'should work' do
       tpl = <<-EOF
@@ -9,11 +9,11 @@ describe Tpl do
       EOF
       
       # time = Benchmark.measure do
-      #   Tpl.render(doc, {:body => 'Test body'}).strip.should == '<div>Test body</div>'
+      #   Skinhead.render(doc, {:body => 'Test body'}).strip.should == '<div>Test body</div>'
       # end
       # puts time
       
-      Tpl.render(tpl, {:body => 'Test body'}).strip.should == '<div>Test body</div>'
+      Skinhead.render(tpl, {:body => 'Test body'}).strip.should == '<div>Test body</div>'
     end
   end
   
@@ -24,7 +24,7 @@ describe Tpl do
         <div data-tpl-remove="true">This will go</div>
       EOF
       
-      Tpl.render(tpl).strip.should == '<div>This will stay</div>'
+      Skinhead.render(tpl).strip.should == '<div>This will stay</div>'
     end
   end
   
@@ -41,7 +41,7 @@ describe Tpl do
           <div data-tpl-filter-find="Foo" data-tpl-filter-replace="Bar">Foo baz</div>
         EOF
         
-        Tpl.render(tpl).strip.should == '<div>Bar baz</div>'
+        Skinhead.render(tpl).strip.should == '<div>Bar baz</div>'
       end
     end
   end
